@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VBL_orarend>
+    <!--Hétfő-->
+    <ora id="h_01" tipus="elmelet">
+        <targy>Elektrotechnika-elektronika</targy>
+        <helyszin>E3</helyszin>
+        <oktato>Szabó Norbert</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>08:00</tol>
+            <ig>09:50</ig>
+        </idopont>
+    </ora>
+
+    <ora id="h_02" tipus="elmelet">
+        <targy>Web technológiák 1.</targy>
+        <helyszin>E5</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>10:00</tol>
+            <ig>12:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="h_03" tipus="gyakorlat">
+        <targy>Web technológiák 1.</targy>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>14:00</tol>
+            <ig>16:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="h_04" tipus="elmelet">
+        <targy>Mobil programozási alapok</targy>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>16:00</tol>
+            <ig>18:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="h_05" tipus="gyakorlat">
+        <targy>Mobil programozási alapok</targy>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>18:00</tol>
+            <ig>20:00</ig>
+        </idopont>
+    </ora>
+
+    <!--Kedd-->
+    <ora id="k_01" tipus="elmelet">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <helyszin>E32</helyszin>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>10:00</tol>
+            <ig>12:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="k_02" tipus="gyakorlat">
+        <targy>Web technológiák 1.</targy>
+        <helyszin>E5</helyszin>
+        <oktato>Fazekas Levente Áron</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>12:00</tol>
+            <ig>14:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="k_03" tipus="gyakorlat">
+        <targy>Elektrotechnika-elektronika</targy>
+        <helyszin>T058</helyszin>
+        <oktato>Dr. Kozsely Gábor</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>14:00</tol>
+            <ig>16:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="k_04" tipus="gyakorlat">
+        <targy>UNIX rendszergazda</targy>
+        <helyszin>LAU7</helyszin>
+        <oktato>Dr. Baksa Attila</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>17:00</tol>
+            <ig>19:00</ig>
+        </idopont>
+    </ora>
+
+    <!--Szerda-->
+    <ora id="S_01" tipus="elmelet">
+        <targy>UNIX rendszergazda</targy>
+        <helyszin>LAU7</helyszin>
+        <oktato>Dr. Baksa Attila</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>08:00</tol>
+            <ig>10:00</ig>
+        </idopont>
+    </ora>
+
+    <ora id="S_2" tipus="elmelet">
+        <targy>Webes adatkezelő környezetek</targy>
+        <helyszin>T050</helyszin>
+        <oktato>Dr. Kovács László József</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>08:00</tol>
+            <ig>10:00</ig>
+        </idopont>
+    </ora>
+    
+    <ora id="S_03" tipus="gyakorlat">
+        <targy>Webes adatkezelő környezetek</targy>
+        <helyszin>L103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>GÉIK</szak>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>10:00</tol>
+            <ig>12:00</ig>
+        </idopont>
+    </ora>
+</VBL_orarend>

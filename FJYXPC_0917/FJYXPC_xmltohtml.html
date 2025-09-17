@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Órarend</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      padding: 24px;
+      background: #f7f8fb;
+      color: #111827;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #eef2f7;
+      font-size: 0.95rem;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fbfdff;
+    }
+
+    .type-elmelet { font-style: normal; }
+    .type-gyakorlat { font-style: italic; }
+
+  </style>
+</head>
+<body>
+  <h1>Órarend (XML alapján konvertálva)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nap</th>
+        <th>Időpont</th>
+        <th>Tárgy</th>
+        <th>Típus</th>
+        <th>Helyszín</th>
+        <th>Oktató</th>
+        <th>Szak</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hétfő</td>
+        <td>08:00 - 09:50</td>
+        <td>Elektrotechnika-elektronika</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>E3</td>
+        <td>Szabó Norbert</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Hétfő</td>
+        <td>10:00 - 12:00</td>
+        <td>Web technológiák 1.</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>E5</td>
+        <td>Dr. Agárdi Anita</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Hétfő</td>
+        <td>14:00 - 16:00</td>
+        <td>Web technológiák 1.</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>L101</td>
+        <td>Dr. Agárdi Anita</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Hétfő</td>
+        <td>16:00 - 18:00</td>
+        <td>Mobil programozási alapok</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>L101</td>
+        <td>Dr. Agárdi Anita</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Hétfő</td>
+        <td>18:00 - 20:00</td>
+        <td>Mobil programozási alapok</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>L101</td>
+        <td>Dr. Agárdi Anita</td>
+        <td>GÉIK</td>
+      </tr>
+
+      <tr>
+        <td>Kedd</td>
+        <td>10:00 - 12:00</td>
+        <td>Mesterséges intelligencia alapok</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>E32</td>
+        <td>Kunné Dr. Tamás Judit</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Kedd</td>
+        <td>12:00 - 14:00</td>
+        <td>Web technológiák 1.</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>E5</td>
+        <td>Fazekas Levente Áron</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Kedd</td>
+        <td>14:00 - 16:00</td>
+        <td>Elektrotechnika-elektronika</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>T058</td>
+        <td>Dr. Kozsely Gábor</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>kedd</td>
+        <td>17:00 - 19:00</td>
+        <td>UNIX rendszergazda</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>LAU7</td>
+        <td>Dr. Baksa Attila</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Szerda</td>
+        <td>08:00 - 10:00</td>
+        <td>UNIX rendszergazda</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>LAU7</td>
+        <td>Dr. Baksa Attila</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Szerda</td>
+        <td>08:00 - 10:00</td>
+        <td>Webes adatkezelő környezetek</td>
+        <td class="type-elmelet">elmélet</td>
+        <td>T050</td>
+        <td>Dr. Kovács László József</td>
+        <td>GÉIK</td>
+      </tr>
+      <tr>
+        <td>Szerda</td>
+        <td>10:00 - 12:00</td>
+        <td>Webes adatkezelő környezetek</td>
+        <td class="type-gyakorlat">gyakorlat</td>
+        <td>L103</td>
+        <td>Dr. Bednarik László</td>
+        <td>GÉIK</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
