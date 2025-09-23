@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia>
+    <cim>Nemzetközi Informatikai Konferencia 2025</cim>
+    <eloado>
+        <nev>Dr. Kiss Júlia</nev>
+        <lakcim>6722 Szeged, Kárász utca 12.</lakcim>
+        <adoszam>98765432-2-45</adoszam>
+    </eloado>
+    <datum>2025-11-20</datum>
+    <helyszin>Debreceni Egyetem</helyszin>
+    
+    <hallgatok>
+        <hallgato>
+            <nev>Farkas Bence</nev>
+            <lakcim>8000 Székesfehérvár, Budai út 50.</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Németh Lilla</nev>
+            <lakcim>9400 Sopron, Várkerület 3.</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Horváth Dániel</nev>
+            <lakcim>7624 Pécs, Ferencesek utcája 8.</lakcim>
+        </hallgato>
+    </hallgatok>
+</konferencia>
