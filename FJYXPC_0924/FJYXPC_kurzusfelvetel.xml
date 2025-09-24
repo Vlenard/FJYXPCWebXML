@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FJYXPC_kurzusfelvetel tanev="2025/26 I." egyetem="ME">
+    <hallgato>
+        <hnev>Váradi Bence Lénárd</hnev>
+        <szulev>2003</szulev>
+        <szak evf="3">mérnökinformatikus</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="h1">
+            <kurzusnev>Elektrotechnika-elektronika (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>E/3</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>8:00</tol>
+                <ig>9:30</ig>
+            </idopont>
+            <oktato>Szabó Norbert István</oktato>
+        </kurzus>
+        <kurzus id="h2" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Web technológiák 1 (elmélet)</kurzusnev>
+            <kredit>5</kredit>
+            <hely>E/5</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>10:00</tol>
+                <ig>11:30</ig>
+            </idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+            <oraado>Dr. Agárdi Anita</oraado>
+        </kurzus>
+        <kurzus id="h3">
+            <kurzusnev>Angol műszaki szaknyelv 1 (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>12:00</tol>
+                <ig>13:30</ig>
+            </idopont>
+            <oktato>Dobronyi Eszter</oktato>
+        </kurzus>
+        <kurzus id="h4" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Web technológiák 1 (gyakorlat)</kurzusnev>
+            <kredit>3</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>14:00</tol>
+                <ig>15:30</ig>
+            </idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+            <oraado>Dr. Agárdi Anita</oraado>
+        </kurzus>
+        <kurzus id="h5">
+            <kurzusnev>Mobil programozási alapok (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>16:00</tol>
+                <ig>17:30</ig>
+            </idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="h6">
+            <kurzusnev>Mobil programozási alapok (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>hétfő</nap>
+                <tol>18:00</tol>
+                <ig>19:30</ig>
+            </idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="h7">
+            <kurzusnev>Mesterséges intelligencia alapok (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>E/32</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <tol>10:00</tol>
+                <ig>11:30</ig>
+            </idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+        </kurzus>
+        <kurzus id="h8">
+            <kurzusnev>Valószínűségszámítás és matematikai statisztika (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>T050</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <tol>14:00</tol>
+                <ig>15:30</ig>
+            </idopont>
+            <oktato>Dr. Glavositcs Tamás</oktato>
+        </kurzus>
+        <kurzus id="h9">
+            <kurzusnev>Mesterséges intelligencia alapok (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>E/32</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <tol>12:00</tol>
+                <ig>13:30</ig>
+            </idopont>
+            <oktato>Fazekas Levente Áron</oktato>
+        </kurzus>
+        <kurzus id="h10">
+            <kurzusnev>Elektrotechnika-elektronika (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>A3/313</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <tol>14:00</tol>
+                <ig>15:30</ig>
+            </idopont>
+            <oktato>Dr. Kozsely Gábor</oktato>
+        </kurzus>
+        <kurzus id="h11">
+            <kurzusnev>UNIX rendszergazda (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>kedd</nap>
+                <tol>17:00</tol>
+                <ig>18:30</ig>
+            </idopont>
+            <oktato>Dr. Baksa Attila</oktato>
+        </kurzus>
+        <kurzus id="h12">
+            <kurzusnev>UNIX rendszergazda (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>L101</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <tol>8:00</tol>
+                <ig>9:30</ig>
+            </idopont>
+            <oktato>Dr. Baksa Attila</oktato>
+        </kurzus>
+        <kurzus id="h13">
+            <kurzusnev>Webes adatkezelő környezetek (elmélet)</kurzusnev>
+            <kredit>4</kredit>
+            <hely>T050</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <tol>8:00</tol>
+                <ig>9:30</ig>
+            </idopont>
+            <oktato>Dr. Kovács László József</oktato>
+        </kurzus>
+        <kurzus id="h14">
+            <kurzusnev>Webes adatkezelő környezetek (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>L103</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <tol>10:00</tol>
+                <ig>11:30</ig>
+            </idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+        <kurzus id="h15">
+            <kurzusnev>Valószínűségszámítás és matematikai statisztika (gyakorlat)</kurzusnev>
+            <kredit>2</kredit>
+            <hely>T050</hely>
+            <idopont>
+                <nap>szerda</nap>
+                <tol>14:00</tol>
+                <ig>15:30</ig>
+            </idopont>
+            <oktato>Dr. Nagy Noémi</oktato>
+        </kurzus>
+    </kurzusok>
+</FJYXPC_kurzusfelvetel>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT VBL_orarend (ora*)>
+<!ELEMENT ora (targy, helyszin, oktato, szak, idopont)>
+<!ATTLIST ora id ID #REQUIRED>
+<!ATTLIST ora tipus (elmelet|gyakorlat) #REQUIRED>
+<!ELEMENT targy (#PCDATA)>
+<!ELEMENT helyszin (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ELEMENT idopont (nap, tol, ig)>
+<!ELEMENT nap (#PCDATA)>
+<!ELEMENT tol (#PCDATA)>
+<!ELEMENT ig (#PCDATA)>
