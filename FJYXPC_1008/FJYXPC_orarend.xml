@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VBL_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="FJYXPC_orarend.xsd">
+    <!--Hétfő-->
+    <ora id="01" tipus="elmelet">
+        <targy>Elektrotechnika-elektronika</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>8</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>E3</helyszin>
+        <oktato>Szabó Norbert</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="02" tipus="elmelet">
+        <targy>Web technológiák 1.</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>E5</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="03" tipus="gyakorlat">
+        <targy>Web technológiák 1.</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="04" tipus="elmelet">
+        <targy>Mobil programozási alapok</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>16</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="05" tipus="gyakorlat">
+        <targy>Mobil programozási alapok</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>18</tol>
+            <ig>20</ig>
+        </idopont>
+        <helyszin>L101</helyszin>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <!--Kedd-->
+    <ora id="11" tipus="elmelet">
+        <targy>Mesterséges intelligencia alapok</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>E32</helyszin>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="12" tipus="gyakorlat">
+        <targy>Web technológiák 1.</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>E5</helyszin>
+        <oktato>Fazekas Levente Áron</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="13" tipus="gyakorlat">
+        <targy>Elektrotechnika-elektronika</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>T058</helyszin>
+        <oktato>Dr. Kozsely Gábor</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="14" tipus="gyakorlat">
+        <targy>UNIX rendszergazda</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>17</tol>
+            <ig>19</ig>
+        </idopont>
+        <helyszin>LAU7</helyszin>
+        <oktato>Dr. Baksa Attila</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <!--Szerda-->
+    <ora id="21" tipus="elmelet">
+        <targy>UNIX rendszergazda</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>08</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>LAU7</helyszin>
+        <oktato>Dr. Baksa Attila</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="22" tipus="elmelet">
+        <targy>Webes adatkezelő környezetek</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>08</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>T050</helyszin>
+        <oktato>Dr. Kovács László József</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+
+    <ora id="23" tipus="gyakorlat">
+        <targy>Webes adatkezelő környezetek</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>L103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>GÉIK</szak>
+    </ora>
+</VBL_orarend>
