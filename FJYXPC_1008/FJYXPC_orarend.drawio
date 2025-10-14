@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="ixD1_JZ9vxKWpL3o32iY">
+    <mxGraphModel dx="1301" dy="704" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root" value="FJYXPC_kurzusfelvetel" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="360" y="100" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tanev" value="tanev" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="330" y="60" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="egyetem" value="egyetem" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="510" y="60" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tanev" style="endArrow=none;" parent="1" source="root" target="tanev" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_egyetem" style="endArrow=none;" parent="1" source="root" target="egyetem" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hallgato" value="hallgato" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="160" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_hallgato" style="endArrow=block;" parent="1" source="root" target="hallgato" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hnev" value="hnev" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="40" y="250" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szulev" value="szulev" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="150" y="250" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="szak" value="szak" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="250" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_hnev" style="endArrow=block;" parent="1" source="hallgato" target="hnev" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_szulev" style="endArrow=block;" parent="1" source="hallgato" target="szulev" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_szak" style="endArrow=block;" parent="1" source="hallgato" target="szak" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evf" value="evf" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="280" y="300" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_evf" style="endArrow=none;" parent="1" source="szak" target="evf" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzusok" value="kurzusok" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="640" y="160" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzusok" style="endArrow=block;" parent="1" source="root" target="kurzusok" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzus" value="kurzus" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=3;" parent="1" vertex="1">
+          <mxGeometry x="650" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzus" style="endArrow=block;" parent="1" source="kurzusok" target="kurzus" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzus_id" value="id" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="410" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzus_jovahagyas" value="jovahagyas" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="390" y="250" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzus_nyelv" value="nyelv" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" parent="1" vertex="1">
+          <mxGeometry x="400" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzus_id" style="endArrow=none;" parent="1" source="kurzus" target="kurzus_id" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzus_jovahagyas" style="endArrow=none;" parent="1" source="kurzus" target="kurzus_jovahagyas" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzus_nyelv" style="endArrow=none;" parent="1" source="kurzus" target="kurzus_nyelv" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kurzusnev" value="kurzusnev" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="400" y="390" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kredit" value="kredit" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="400" y="340" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hely" value="hely" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="400" y="445" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="idopont" value="idopont" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oktato" value="oktato" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="570" y="445" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oraado" value="oraado" style="rectangle;whiteSpace=wrap;html=1;dashed=1;fillColor=#e1d5e7;" parent="1" vertex="1">
+          <mxGeometry x="480" y="445" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kurzusnev" style="endArrow=block;" parent="1" source="kurzus" target="kurzusnev" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_kredit" style="endArrow=block;" parent="1" source="kurzus" target="kredit" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_hely" style="endArrow=block;" parent="1" source="kurzus" target="hely" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_idopont" style="endArrow=block;" parent="1" source="kurzus" target="idopont" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_oktato" style="endArrow=block;" parent="1" source="kurzus" target="oktato" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_oraado" style="endArrow=block;" parent="1" source="kurzus" target="oraado" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nap" value="nap" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="660" y="450" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="tol" value="tol" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="720" y="450" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ig" value="ig" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="780" y="450" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_nap" style="endArrow=block;" parent="1" source="idopont" target="nap" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_tol" style="endArrow=block;" parent="1" source="idopont" target="tol" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_ig" style="endArrow=block;" parent="1" source="idopont" target="ig" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
