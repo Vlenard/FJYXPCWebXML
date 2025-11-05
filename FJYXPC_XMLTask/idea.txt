@@ -1,0 +1,60 @@
+Felhasznalo
+---------------------------------
+PK id
+felhasznalonev
+email
+teljesnev
+szuletesi_datum
+telefonszamok
+bemutatkozas
+
+Fozde
+---------------------------------
+PK id
+nev
+alapitasi_ev
+orszag
+varos
+weboldal
+cim_id
+
+Cim
+---------------------------------
+PK id
+utca
+iranyitoszam
+megye
+orszag
+
+Sor
+---------------------------------
+PK id
+nev
+alkoholtartalom
+keseruseg
+leiras
+kiadas_datuma
+fozde_id
+
+Stilus
+---------------------------------
+PK id
+nev
+eredet
+leiras
+
+Cimke
+---------------------------------
+PK id
+nev
+informacio
+
+Ertekeles
+---------------------------------
+PK id
+felhasznalo_id
+sor_id
+pontszam
+megjegyzes
+kostolas_datuma
+helyszin
