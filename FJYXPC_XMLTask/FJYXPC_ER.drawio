@@ -214,7 +214,7 @@
         <mxCell id="_ym_SDXBif_1goZ14U6L-76" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1410" y="110" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-77" value="Fő_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-77" value="Főzde_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1550" y="110" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_ym_SDXBif_1goZ14U6L-78" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-39" target="_ym_SDXBif_1goZ14U6L-77">
@@ -256,7 +256,7 @@
         <mxCell id="_ym_SDXBif_1goZ14U6L-86" value="Szlogen" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1870" y="150" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-88" value="Fő_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-88" value="Főzde_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="1870" y="90" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_ym_SDXBif_1goZ14U6L-89" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-30" target="_ym_SDXBif_1goZ14U6L-88">
@@ -288,9 +288,6 @@
             <mxPoint x="1640" y="210" as="sourcePoint" />
             <mxPoint x="1690" y="160" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-94" value="Főzett" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1415" y="400" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="jVxeTB4Ofey4zo_HH_Sh-1" value="Utca" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1870" y="440" width="120" height="50" as="geometry" />
@@ -415,7 +412,7 @@
             <mxPoint x="1130" y="-70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-29" value="Google értékelés" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-29" value="Google Értékelés" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1270" y="-370" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="jVxeTB4Ofey4zo_HH_Sh-30" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-31" target="jVxeTB4Ofey4zo_HH_Sh-29">
@@ -514,7 +511,7 @@
         <mxCell id="jVxeTB4Ofey4zo_HH_Sh-53" value="IBU" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="500" y="-160" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-54" value="Netto térfogat" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-54" value="Netto t&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;érfogat&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="360" y="-160" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="jVxeTB4Ofey4zo_HH_Sh-56" value="Kalória" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
@@ -546,6 +543,9 @@
             <mxPoint x="360" y="-120" as="sourcePoint" />
             <mxPoint x="410" y="-170" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="lWfG1_v3FTRqVOIQqHtD-1" value="Főző mester" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1410" y="400" width="120" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

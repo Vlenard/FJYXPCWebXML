@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="Rbeer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="felhasznalo" type="FelhasznaloTipus" maxOccurs="unbounded"/>
+                <xs:element name="ertekeles" type="ErtekelesTipus" maxOccurs="unbounded"/>
+                <xs:element name="sor" type="SorTipus" maxOccurs="unbounded"/>
+                <xs:element name="fozes" type="FozesTipus" maxOccurs="unbounded"/>
+                <xs:element name="fozde" type="FozdeTipus" maxOccurs="unbounded"/>
+                <xs:element name="cimke" type="CimkeTipus" maxOccurs="unbounded"/>
+                <xs:element name="vasarlas" type="VasarlasTipus" maxOccurs="unbounded"/>
+                <xs:element name="forgalmazo" type="ForgalmazoTipus" maxOccurs="unbounded"/>
+                <xs:element name="uzlet" type="UzletTipus" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- ===================== Primary keys (elsődleges kulcsok) ===================== -->
+        <xs:key name="felhasznaloKey">
+            <xs:selector xpath="felhasznalo"/>
+            <xs:field xpath="@feId"/>
+        </xs:key>
+
+        <xs:key name="sorKey">
+            <xs:selector xpath="sor"/>
+            <xs:field xpath="@sId"/>
+        </xs:key>
+
+        <xs:key name="fozdeKey">
+            <xs:selector xpath="fozde"/>
+            <xs:field xpath="@fozdeId"/>
+        </xs:key>
+
+        <xs:key name="cimkeKey">
+            <xs:selector xpath="cimke"/>
+            <xs:field xpath="@cId"/>
+        </xs:key>
+
+        <xs:key name="uzletKey">
+            <xs:selector xpath="uzlet"/>
+            <xs:field xpath="@uId"/>
+        </xs:key>
+
+        <xs:key name="forgalmazoKey">
+            <xs:selector xpath="forgalmazo"/>
+            <xs:field xpath="@foId"/>
+        </xs:key>
+
+        <!-- ===================== Foreign keys (idegen kulcsok) ===================== -->
+        <!-- ertekeles.feId -> felhasznalo.feId -->
+        <xs:keyref name="ertekeles_to_felhasznalo" refer="felhasznaloKey">
+            <xs:selector xpath="ertekeles"/>
+            <xs:field xpath="@feId"/>
+        </xs:keyref>
+
+        <!-- ertekeles.sId -> sor.sId -->
+        <xs:keyref name="ertekeles_to_sor" refer="sorKey">
+            <xs:selector xpath="ertekeles"/>
+            <xs:field xpath="@sId"/>
+        </xs:keyref>
+
+        <!-- vasarlas.uId -> uzlet.uId -->
+        <xs:keyref name="vasarlas_to_uzlet" refer="uzletKey">
+            <xs:selector xpath="vasarlas"/>
+            <xs:field xpath="@uId"/>
+        </xs:keyref>
+
+        <!-- vasarlas.sId -> sor.sId -->
+        <xs:keyref name="vasarlas_to_sor" refer="sorKey">
+            <xs:selector xpath="vasarlas"/>
+            <xs:field xpath="@sId"/>
+        </xs:keyref>
+
+        <!-- fozes.sId -> sor.sId -->
+        <xs:keyref name="fozes_to_sor" refer="sorKey">
+            <xs:selector xpath="fozes"/>
+            <xs:field xpath="@sId"/>
+        </xs:keyref>
+
+        <!-- fozes.fozdeId -> fozde.fozdeId -->
+        <xs:keyref name="fozes_to_fozde" refer="fozdeKey">
+            <xs:selector xpath="fozes"/>
+            <xs:field xpath="@fozdeId"/>
+        </xs:keyref>
+
+        <!-- sor.foId -> forgalmazo.foId -->
+        <xs:keyref name="sor_to_forgalmazo" refer="forgalmazoKey">
+            <xs:selector xpath="sor"/>
+            <xs:field xpath="@foId"/>
+        </xs:keyref>
+
+    </xs:element>
+
+    <!-- ===================== Típusdefiníciók (megegyeznek a korábbival) ===================== -->
+    <xs:complexType name="FelhasznaloTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="elerhetoseg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="email" type="xs:string"/>
+                        <xs:element name="telefonszam" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="jelszo" type="xs:string"/>
+            <xs:element name="profilkep" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="feId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ErtekelesTipus">
+        <xs:sequence>
+            <xs:element name="pontszam" type="xs:integer"/>
+            <xs:element name="ertekeles" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="feId" type="xs:integer" use="required"/>
+        <xs:attribute name="sId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="SorTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="mufaj" type="xs:string"/>
+            <xs:element name="alkohol" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="sId" type="xs:integer" use="required"/>
+        <xs:attribute name="foId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="FozesTipus">
+        <xs:sequence>
+            <xs:element name="fozoMester" type="xs:string"/>
+            <xs:element name="datum" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="sId" type="xs:integer" use="required"/>
+        <xs:attribute name="fozdeId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="FozdeTipus">
+        <xs:sequence>
+            <xs:element name="szlogen" type="xs:string"/>
+            <xs:element name="alapitva" type="xs:gYear"/>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="cim">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="varos" type="xs:string"/>
+                        <xs:element name="utca" type="xs:string"/>
+                        <xs:element name="hazszam" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="fozdeId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="CimkeTipus">
+        <xs:sequence>
+            <xs:element name="kaloria" type="xs:integer"/>
+            <xs:element name="osszetevok" type="xs:string"/>
+            <xs:element name="nettoTerfogat" type="xs:decimal"/>
+            <xs:element name="ibu" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="cId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="VasarlasTipus">
+        <xs:sequence>
+            <xs:element name="ar" type="xs:integer"/>
+            <xs:element name="datum" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="uId" type="xs:integer" use="required"/>
+        <xs:attribute name="sId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ForgalmazoTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="webhely" type="xs:anyURI"/>
+            <xs:element name="szekhely" type="xs:string"/>
+            <xs:element name="vevoszolgalat" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="foId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="UzletTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="nyitvatartas" type="xs:string"/>
+            <xs:element name="googleErtekeles" type="xs:decimal"/>
+            <xs:element name="cim">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="varos" type="xs:string"/>
+                        <xs:element name="utca" type="xs:string"/>
+                        <xs:element name="hazszam" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="uId" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

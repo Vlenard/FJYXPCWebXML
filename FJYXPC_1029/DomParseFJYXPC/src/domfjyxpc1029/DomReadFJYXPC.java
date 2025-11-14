@@ -14,12 +14,12 @@ public class DomReadFJYXPC {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = factory.newDocumentBuilder();
 
-        Document xgbt95 = dBuilder.parse(xmlFile);
-        xgbt95.getDocumentElement().normalize();
+        Document fjyxpc = dBuilder.parse(xmlFile);
+        fjyxpc.getDocumentElement().normalize();
 
-        System.out.println("Gyökér elem: " + xgbt95.getDocumentElement().getNodeName());
+        System.out.println("Gyökér elem: " + fjyxpc.getDocumentElement().getNodeName());
 
-        NodeList nList = xgbt95.getElementsByTagName("hallgato");
+        NodeList nList = fjyxpc.getElementsByTagName("hallgato");
 
         for (int i = 0; i < nList.getLength(); i++) {
             Node nNode = nList.item(i);

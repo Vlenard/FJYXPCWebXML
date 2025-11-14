@@ -1,0 +1,192 @@
+Gyökér elem: Rbeer
+--------------------------------
+
+Elem: Felhasználó
+--------------------------------
+Azonosítók:
+    Felhasználó azonosító: 1
+Név: Kiss Adam
+Elérhetőség:
+    E-mail cím: adam.kiss@example.com
+    Telefonszám: 06201234567
+Jelszó: pass1234
+Profilkép: profil1.jpg
+--------------------------------
+
+Elem: Felhasználó
+--------------------------------
+Azonosítók:
+    Felhasználó azonosító: 2
+Név: Nagy Eva
+Elérhetőség:
+    E-mail cím: eva.nagy@example.com
+    Telefonszám: 06304561234
+Jelszó: eva2025
+Profilkép: profil2.png
+--------------------------------
+
+Elem: Értékelés
+--------------------------------
+Azonosítók:
+    Felhasználó azonosító: 1
+    Sör azonosító: 1
+Pontszám: 5
+Értékelés: Kivalo iz, frissito!
+--------------------------------
+
+Elem: Értékelés
+--------------------------------
+Azonosítók:
+    Felhasználó azonosító: 2
+    Sör azonosító: 2
+Pontszám: 3
+Értékelés: Atlagos, de nem rossz.
+--------------------------------
+
+Elem: Sör
+--------------------------------
+Azonosítók:
+    Forgalmazó azonosító: 1
+    Sör azonosító: 1
+Név: Golden Ale
+Műfaj: Ale
+Alkoholtartalom: 5.2
+--------------------------------
+
+Elem: Sör
+--------------------------------
+Azonosítók:
+    Forgalmazó azonosító: 2
+    Sör azonosító: 2
+Név: Dark Lager
+Műfaj: Lager
+Alkoholtartalom: 4.8
+--------------------------------
+
+Elem: Főzés
+--------------------------------
+Azonosítók:
+    Főzde azonosító: 1
+    Sör azonosító: 1
+Főzőmester: Dreher Antal
+Dátum: 2025-03-12
+--------------------------------
+
+Elem: Főzés
+--------------------------------
+Azonosítók:
+    Főzde azonosító: 2
+    Sör azonosító: 2
+Főzőmester: Ruff Bálint
+Dátum: 2025-04-25
+--------------------------------
+
+Elem: Főzde
+--------------------------------
+Azonosítók:
+    Főzde azonosító: 1
+Szlogen: Tradició és minőség!
+Alapítva: 1998
+Név: Budapest Brewing Co.
+Cím:
+    Város: Budapest
+    Utca: Fo ut
+    Házszám: 12
+--------------------------------
+
+Elem: Főzde
+--------------------------------
+Azonosítók:
+    Főzde azonosító: 2
+Szlogen: Frissség minden kortyban
+Alapítva: 2005
+Név: Debrecen Beerworks
+Cím:
+    Város: Debrecen
+    Utca: Kossuth ter
+    Házszám: 7
+--------------------------------
+
+Elem: Címke
+--------------------------------
+Azonosítók:
+    Címke azonosító: 1
+Kalória: 45
+Összetevők: víz, árpa, komló, édesmaláta
+Nettó Térfogat (L): 0.5
+IBU érték: 25
+--------------------------------
+
+Elem: Címke
+--------------------------------
+Azonosítók:
+    Címke azonosító: 2
+Kalória: 52
+Összetevők: víz, árpa, komló, citromhéj
+Nettó Térfogat (L): 0.33
+IBU érték: 18
+--------------------------------
+
+Elem: Vásárlás
+--------------------------------
+Azonosítók:
+    Sör azonosító: 1
+    Üzlet azonosító: 1
+Ár: 750
+Dátum: 2025-05-01
+--------------------------------
+
+Elem: Vásárlás
+--------------------------------
+Azonosítók:
+    Sör azonosító: 2
+    Üzlet azonosító: 1
+Ár: 890
+Dátum: 2025-05-03
+--------------------------------
+
+Elem: Forgalmazó
+--------------------------------
+Azonosítók:
+    Forgalmazó azonosító: 1
+Név: DrinkLine Kft.
+Webhely: https://drinkline.hu
+Székhely: Budapest
+Vevőszolgálat: info@drinkline.hu
+--------------------------------
+
+Elem: Forgalmazó
+--------------------------------
+Azonosítók:
+    Forgalmazó azonosító: 2
+Név: BeerWorld Zrt.
+Webhely: https://beerworld.hu
+Székhely: Szeged
+Vevőszolgálat: support@beerworld.hu
+--------------------------------
+
+Elem: Üzlet
+--------------------------------
+Azonosítók:
+    Üzlet azonosító: 1
+Név: Alkohol Market
+Nyitvatartás: 08:00-22:00
+Google értékelés: 4.6
+Cím:
+    Város: Pecs
+    Utca: Rakoczi ut
+    Házszám: 21
+--------------------------------
+
+Elem: Üzlet
+--------------------------------
+Azonosítók:
+    Üzlet azonosító: 2
+Név: Beervana
+Nyitvatartás: 10:00-20:00
+Google értékelés: 4.9
+Cím:
+    Város: Gyor
+    Utca: Baross utca
+    Házszám: 9
+--------------------------------

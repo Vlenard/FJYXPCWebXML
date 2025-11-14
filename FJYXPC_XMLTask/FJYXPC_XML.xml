@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rbeer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FJYXPC_XMLSchema.xsd">
+
+    <!-- ===================== Felhasználók ===================== -->
+    <!-- Felhasználó 1 -->
+    <felhasznalo feId="1">
+        <nev>Kiss Adam</nev>
+        <elerhetoseg>
+            <email>adam.kiss@example.com</email>
+            <telefonszam>06201234567</telefonszam>
+        </elerhetoseg>
+        <jelszo>pass1234</jelszo>
+        <profilkep>profil1.jpg</profilkep>
+    </felhasznalo>
+
+    <!-- Felhasználó 2 -->
+    <felhasznalo feId="2">
+        <nev>Nagy Eva</nev>
+        <elerhetoseg>
+            <email>eva.nagy@example.com</email>
+            <telefonszam>06304561234</telefonszam>
+        </elerhetoseg>
+        <jelszo>eva2025</jelszo>
+        <profilkep>profil2.png</profilkep>
+    </felhasznalo>
+
+    <!-- ===================== Értékelések ===================== -->
+    <!-- Értékelés 1 -->
+    <ertekeles feId="1" sId="1">
+        <pontszam>5</pontszam>
+        <ertekeles>Kivalo iz, frissito!</ertekeles>
+    </ertekeles>
+
+    <!-- Értékelés 2 -->
+    <ertekeles feId="2" sId="2">
+        <pontszam>3</pontszam>
+        <ertekeles>Atlagos, de nem rossz.</ertekeles>
+    </ertekeles>
+
+    <!-- ===================== Sörök ===================== -->
+    <!-- Sör 1 -->
+    <sor sId="1" foId="1">
+        <nev>Golden Ale</nev>
+        <mufaj>Ale</mufaj>
+        <alkohol>5.2</alkohol>
+    </sor>
+
+    <!-- Sör 2 -->
+    <sor sId="2" foId="2">
+        <nev>Dark Lager</nev>
+        <mufaj>Lager</mufaj>
+        <alkohol>4.8</alkohol>
+    </sor>
+
+    <!-- ===================== Főzések ===================== -->
+    <!-- Főzés 1 -->
+    <fozes sId="1" fozdeId="1">
+        <fozoMester>Dreher Antal</fozoMester>
+        <datum>2025-03-12</datum>
+    </fozes>
+
+    <!-- Főzés 2 -->
+    <fozes sId="2" fozdeId="2">
+        <fozoMester>Ruff Bálint</fozoMester>
+        <datum>2025-04-25</datum>
+    </fozes>
+
+    <!-- ===================== Főzdék ===================== -->
+    <!-- Főzde 1 -->
+    <fozde fozdeId="1">
+        <szlogen>Tradició és minőség!</szlogen>
+        <alapitva>1998</alapitva>
+        <nev>Budapest Brewing Co.</nev>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Fo ut</utca>
+            <hazszam>12</hazszam>
+        </cim>
+    </fozde>
+
+    <!-- Főzde 2 -->
+    <fozde fozdeId="2">
+        <szlogen>Frissség minden kortyban</szlogen>
+        <alapitva>2005</alapitva>
+        <nev>Debrecen Beerworks</nev>
+        <cim>
+            <varos>Debrecen</varos>
+            <utca>Kossuth ter</utca>
+            <hazszam>7</hazszam>
+        </cim>
+    </fozde>
+
+    <!-- ===================== Címkék ===================== -->
+    <!-- Címke 1 -->
+    <cimke cId="1">
+        <kaloria>45</kaloria>
+        <osszetevok>víz, árpa, komló, édesmaláta</osszetevok>
+        <nettoTerfogat>0.5</nettoTerfogat>
+        <ibu>25</ibu>
+    </cimke>
+
+    <!-- Címke 2 -->
+    <cimke cId="2">
+        <kaloria>52</kaloria>
+        <osszetevok>víz, árpa, komló, citromhéj</osszetevok>
+        <nettoTerfogat>0.33</nettoTerfogat>
+        <ibu>18</ibu>
+    </cimke>
+
+    <!-- ===================== Vásárlások ===================== -->
+    <!-- Vásárlás 1 -->
+    <vasarlas uId="1" sId="1">
+        <ar>750</ar>
+        <datum>2025-05-01</datum>
+    </vasarlas>
+
+    <!-- Vásárlás 2 -->
+    <vasarlas uId="1" sId="2">
+        <ar>890</ar>
+        <datum>2025-05-03</datum>
+    </vasarlas>
+
+    <!-- ===================== Forgalmazók ===================== -->
+    <!-- Forgalmazó 1 -->
+    <forgalmazo foId="1">
+        <nev>DrinkLine Kft.</nev>
+        <webhely>https://drinkline.hu</webhely>
+        <szekhely>Budapest</szekhely>
+        <vevoszolgalat>info@drinkline.hu</vevoszolgalat>
+    </forgalmazo>
+
+    <!-- Forgalmazó 2 -->
+    <forgalmazo foId="2">
+        <nev>BeerWorld Zrt.</nev>
+        <webhely>https://beerworld.hu</webhely>
+        <szekhely>Szeged</szekhely>
+        <vevoszolgalat>support@beerworld.hu</vevoszolgalat>
+    </forgalmazo>
+
+    <!-- ===================== Üzletek ===================== -->
+    <!-- Üzlet 1 -->
+    <uzlet uId="1">
+        <nev>Alkohol Market</nev>
+        <nyitvatartas>08:00-22:00</nyitvatartas>
+        <googleErtekeles>4.6</googleErtekeles>
+        <cim>
+            <varos>Pecs</varos>
+            <utca>Rakoczi ut</utca>
+            <hazszam>21</hazszam>
+        </cim>
+    </uzlet>
+
+    <!-- Üzlet 2 -->
+    <uzlet uId="2">
+        <nev>Beervana</nev>
+        <nyitvatartas>10:00-20:00</nyitvatartas>
+        <googleErtekeles>4.9</googleErtekeles>
+        <cim>
+            <varos>Gyor</varos>
+            <utca>Baross utca</utca>
+            <hazszam>9</hazszam>
+        </cim>
+    </uzlet>
+
+</Rbeer>
