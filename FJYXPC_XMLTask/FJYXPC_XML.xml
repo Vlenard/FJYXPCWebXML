@@ -34,8 +34,13 @@
 
     <!-- Értékelés 2 -->
     <ertekeles feId="2" sId="2">
-        <pontszam>3</pontszam>
-        <ertekeles>Atlagos, de nem rossz.</ertekeles>
+        <pontszam>2</pontszam>
+        <ertekeles>Nem nagyon vagyok el vele!</ertekeles>
+    </ertekeles>
+
+    <ertekeles feId="2" sId="3">
+        <pontszam>5</pontszam>
+        <ertekeles>Kedvenc sörcim</ertekeles>
     </ertekeles>
 
     <!-- ===================== Sörök ===================== -->
@@ -51,6 +56,12 @@
         <nev>Dark Lager</nev>
         <mufaj>Lager</mufaj>
         <alkohol>4.8</alkohol>
+    </sor>
+
+    <sor sId="3" foId="2">
+        <nev>Paulaner</nev>
+        <mufaj>wheatbeer</mufaj>
+        <alkohol>5.5</alkohol>
     </sor>
 
     <!-- ===================== Főzések ===================== -->
