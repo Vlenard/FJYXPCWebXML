@@ -14,11 +14,15 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 public class FjyxpcDomQuery {
-    // Belső osztály az értékelések tárolásához
+
+    // Adatszerkezet egy felhasználó által értékelt sörről
     static class ErtekeltSor {
         String sorId;
         String sorNev;
         String pontszam;
+        String cimkeId;
+        String cimkeLeiras;
+        String forgalmazoNev;
 
         ErtekeltSor(String sorId, String sorNev, String pontszam) {
             this.sorId = sorId;
@@ -29,64 +33,115 @@ public class FjyxpcDomQuery {
 
     public static void main(String[] args) {
         try {
-            // XML beolvasása DOM-mel
-            File xmlFile = new File("FJYXPC_XMLTask/FJYXPC_XML.xml");
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(xmlFile);
+            File inputFile = new File("FJYXPC_XMLTask/FJYXPC_XML.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
 
-            // ===== Felhasználók és sörök beolvasása =====
-            Map<String, String> felhasznalok = new HashMap<>();
-            Map<String, String> sorok = new HashMap<>();
-
-            NodeList felhasznaloLista = doc.getElementsByTagName("felhasznalo");
-            for (int i = 0; i < felhasznaloLista.getLength(); i++) {
-                Element f = (Element) felhasznaloLista.item(i);
-                String feId = f.getAttribute("feId");
-                String nev = f.getElementsByTagName("nev").item(0).getTextContent();
-                felhasznalok.put(feId, nev);
-            }
-
+            // 1) Sörök beolvasása
+            Map<String, String> sorNevek = new HashMap<>();
+            Map<String, Element> sorElements = new HashMap<>();
             NodeList sorLista = doc.getElementsByTagName("sor");
+
             for (int i = 0; i < sorLista.getLength(); i++) {
                 Element s = (Element) sorLista.item(i);
                 String sId = s.getAttribute("sId");
-                String nev = s.getElementsByTagName("nev").item(0).getTextContent();
-                sorok.put(sId, nev);
+                String nev = getTextContentOfChild(s, "nev");
+
+                sorNevek.put(sId, nev != null ? nev : "Ismeretlen sör");
+                sorElements.put(sId, s);
             }
 
-            // ===== Értékelések felhasználónkénti csoportosítása =====
+            // 2) Címkék beolvasása
+            Map<String, String> cimkeLeirasok = new HashMap<>();
+            NodeList cimkeLista = doc.getElementsByTagName("cimke");
+
+            for (int i = 0; i < cimkeLista.getLength(); i++) {
+                Element c = (Element) cimkeLista.item(i);
+                String cId = c.getAttribute("cId");
+
+                String kaloria = getTextContentOfChild(c, "kaloria");
+                String osszetevok = getTextContentOfChild(c, "osszetevok");
+                String netto = getTextContentOfChild(c, "nettoTerfogat");
+                String ibu = getTextContentOfChild(c, "ibu");
+
+                String desc = "";
+                if (kaloria != null) desc += "Kalória: " + kaloria;
+                if (osszetevok != null) desc += (desc.isEmpty() ? "" : ", ") + "Összetevők: " + osszetevok;
+                if (netto != null) desc += (desc.isEmpty() ? "" : ", ") + "Netto: " + netto;
+                if (ibu != null) desc += (desc.isEmpty() ? "" : ", ") + "IBU: " + ibu;
+                if (desc.isEmpty()) desc = "Nincs címke-információ";
+
+                cimkeLeirasok.put(cId, desc);
+            }
+
+            // 3) Forgalmazók beolvasása
+            Map<String, String> forgalmazok = new HashMap<>();
+            NodeList forgalmazoLista = doc.getElementsByTagName("forgalmazo");
+
+            for (int i = 0; i < forgalmazoLista.getLength(); i++) {
+                Element f = (Element) forgalmazoLista.item(i);
+                String foId = f.getAttribute("foId");
+                String nev = getTextContentOfChild(f, "nev");
+                forgalmazok.put(foId, nev != null ? nev : "Ismeretlen forgalmazó");
+            }
+
+            // 4) Felhasználók beolvasása
+            Map<String, String> felhasznalok = new HashMap<>();
+            NodeList felhLista = doc.getElementsByTagName("felhasznalo");
+
+            for (int i = 0; i < felhLista.getLength(); i++) {
+                Element fe = (Element) felhLista.item(i);
+                String feId = fe.getAttribute("feId");
+                String nev = getTextContentOfChild(fe, "nev");
+                felhasznalok.put(feId, nev != null ? nev : "Ismeretlen felhasználó");
+            }
+
+            // 5) Értékelések beolvasása — üres/hiányzó felhasználó kizárva
             Map<String, List<ErtekeltSor>> ertekelesek = new HashMap<>();
+            NodeList ertekLista = doc.getElementsByTagName("ertekeles");
 
-            NodeList ertekelesLista = doc.getElementsByTagName("ertekeles");
-            for (int i = 0; i < ertekelesLista.getLength(); i++) {
-                Element e = (Element) ertekelesLista.item(i);
-
+            for (int i = 0; i < ertekLista.getLength(); i++) {
+                Element e = (Element) ertekLista.item(i);
                 String feId = e.getAttribute("feId");
                 String sId = e.getAttribute("sId");
+                String pontszam = getTextContentOfChild(e, "pontszam");
 
-                if (!feId.isEmpty()) {
-                    String pontszam = e.getElementsByTagName("pontszam").item(0).getTextContent();
-
-                    // Sör neve lekérése
-                    String sorNev = sorok.getOrDefault(sId, "Ismeretlen sör");
-
-                    // Értékelés objektum létrehozása
-                    ErtekeltSor es = new ErtekeltSor(sId, sorNev, pontszam);
-
-                    // Hozzáadás a megfelelő felhasználó listájához
-                    ertekelesek.computeIfAbsent(feId, k -> new ArrayList<>()).add(es);
+                // --- JAVÍTÁS: Üres feId vagy nem létező felhasználó kizárása ---
+                if (feId == null || feId.trim().isEmpty() || !felhasznalok.containsKey(feId)) {
+                    continue; // hibás bejegyzés → átugrás
                 }
+
+                String sorNev = sorNevek.getOrDefault(sId, "Ismeretlen sör");
+                ErtekeltSor es = new ErtekeltSor(sId, sorNev, pontszam != null ? pontszam : "0");
+
+                Element sorElem = sorElements.get(sId);
+                if (sorElem != null) {
+                    String foId = sorElem.getAttribute("foId");
+                    es.forgalmazoNev = forgalmazok.getOrDefault(foId, "Nincs forgalmazó adat");
+
+                    String cId = sorElem.getAttribute("cId");
+                    if (cId == null || cId.isEmpty()) {
+                        cId = sId; // fallback
+                    }
+
+                    es.cimkeId = cId;
+                    es.cimkeLeiras = cimkeLeirasok.getOrDefault(cId, "Nincs címke adat (" + cId + ")");
+                } else {
+                    es.forgalmazoNev = "Nincs sör elem";
+                    es.cimkeLeiras = "Nincs sör elem";
+                }
+
+                List<ErtekeltSor> lista = ertekelesek.getOrDefault(feId, new ArrayList<>());
+                lista.add(es);
+                ertekelesek.put(feId, lista);
             }
 
-            // ===== Kiírás strukturált, blokkszerű formában =====
-            System.out.println("====== FELHASZNÁLÓK ÁLTAL ÉRTÉKELT SÖRÖK ======\n");
-
-            for (String feId : felhasznalok.keySet()) {
-
+            // 6) Kiíratás
+            for (String feId : ertekelesek.keySet()) {
                 String felhNev = felhasznalok.get(feId);
-                List<ErtekeltSor> lista = ertekelesek.getOrDefault(feId, new ArrayList<>());
+                List<ErtekeltSor> lista = ertekelesek.get(feId);
 
                 System.out.println("--------------------------------");
                 System.out.println("Felhasználó: " + felhNev);
@@ -94,21 +149,34 @@ public class FjyxpcDomQuery {
 
                 if (lista.isEmpty()) {
                     System.out.println("Nincs értékelt sör.");
-                    System.out.println("--------------------------------\n");
                     continue;
                 }
 
-                System.out.print("Értékelt sörök:");
+                System.out.println("Értékelt sörök:");
                 for (ErtekeltSor s : lista) {
                     System.out.println("\n\tSör neve: " + s.sorNev);
                     System.out.println("\tSör azonosító (sId): " + s.sorId);
                     System.out.println("\tPontszám: " + s.pontszam);
+                    System.out.println("\tForgalmazó: " + s.forgalmazoNev);
+                    System.out.println("\tCímke (cId): " + s.cimkeId);
+                    System.out.println("\tCímke leírás: " + s.cimkeLeiras);
                 }
+
                 System.out.println("--------------------------------\n");
             }
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    // Segédfüggvény gyermek elem szövegének kinyerésére
+    private static String getTextContentOfChild(Element parent, String childTag) {
+        NodeList nl = parent.getElementsByTagName(childTag);
+        if (nl.getLength() == 0) return null;
+        Element c = (Element) nl.item(0);
+        if (c == null) return null;
+        String txt = c.getTextContent();
+        return txt != null ? txt.trim() : null;
     }
 }
