@@ -58,6 +58,7 @@
         <alkohol>4.8</alkohol>
     </sor>
 
+    <!-- Sör 3 -->
     <sor sId="3" foId="2">
         <nev>Paulaner</nev>
         <mufaj>wheatbeer</mufaj>

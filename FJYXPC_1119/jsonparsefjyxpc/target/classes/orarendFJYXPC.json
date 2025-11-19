@@ -1,0 +1,162 @@
+{
+  "FJYXPC_orarend": {
+    "ora": [
+      {
+        "id": "h_01",
+        "tipus": "elmelet",
+        "targy": "Elektrotechnika-elektronika",
+        "helyszin": "E3",
+        "oktato": "Szabó Norbert",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "08:00",
+          "ig": "09:50"
+        }
+      },
+      {
+        "id": "h_02",
+        "tipus": "elmelet",
+        "targy": "Web technológiák 1.",
+        "helyszin": "E5",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "10:00",
+          "ig": "12:00"
+        }
+      },
+      {
+        "id": "h_03",
+        "tipus": "gyakorlat",
+        "targy": "Web technológiák 1.",
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "14:00",
+          "ig": "16:00"
+        }
+      },
+      {
+        "id": "h_04",
+        "tipus": "elmelet",
+        "targy": "Mobil programozási alapok",
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "16:00",
+          "ig": "18:00"
+        }
+      },
+      {
+        "id": "h_05",
+        "tipus": "gyakorlat",
+        "targy": "Mobil programozási alapok",
+        "helyszin": "L101",
+        "oktato": "Dr. Agárdi Anita",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "18:00",
+          "ig": "20:00"
+        }
+      },
+      {
+        "id": "k_01",
+        "tipus": "elmelet",
+        "targy": "Mesterséges intelligencia alapok",
+        "helyszin": "E32",
+        "oktato": "Kunné Dr. Tamás Judit",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "10:00",
+          "ig": "12:00"
+        }
+      },
+      {
+        "id": "k_02",
+        "tipus": "gyakorlat",
+        "targy": "Web technológiák 1.",
+        "helyszin": "E5",
+        "oktato": "Fazekas Levente Áron",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "14:00"
+        }
+      },
+      {
+        "id": "k_03",
+        "tipus": "gyakorlat",
+        "targy": "Elektrotechnika-elektronika",
+        "helyszin": "T058",
+        "oktato": "Dr. Kozsely Gábor",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "14:00",
+          "ig": "16:00"
+        }
+      },
+      {
+        "id": "k_04",
+        "tipus": "gyakorlat",
+        "targy": "UNIX rendszergazda",
+        "helyszin": "LAU7",
+        "oktato": "Dr. Baksa Attila",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "17:00",
+          "ig": "19:00"
+        }
+      },
+      {
+        "id": "S_01",
+        "tipus": "elmelet",
+        "targy": "UNIX rendszergazda",
+        "helyszin": "LAU7",
+        "oktato": "Dr. Baksa Attila",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "08:00",
+          "ig": "10:00"
+        }
+      },
+      {
+        "id": "S_2",
+        "tipus": "elmelet",
+        "targy": "Webes adatkezelő környezetek",
+        "helyszin": "T050",
+        "oktato": "Dr. Kovács László József",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "08:00",
+          "ig": "10:00"
+        }
+      },
+      {
+        "id": "S_03",
+        "tipus": "gyakorlat",
+        "targy": "Webes adatkezelő környezetek",
+        "helyszin": "L103",
+        "oktato": "Dr. Bednarik László",
+        "szak": "GÉIK",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "10:00",
+          "ig": "12:00"
+        }
+      }
+    ]
+  }
+}
