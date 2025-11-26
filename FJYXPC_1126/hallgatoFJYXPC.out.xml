@@ -1,0 +1,26 @@
+<studentsTable>
+   <studentRecord>
+      <id>1</id>
+      <vezeteknev>Fekete</vezeteknev>
+      <keresztnev>Anna</keresztnev>
+      <becenev>Annus</becenev>
+      <kor>21</kor>
+      <ossztondij>5000</ossztondij>
+   </studentRecord>
+   <studentRecord>
+      <id>2</id>
+      <vezeteknev>Pista</vezeteknev>
+      <keresztnev>Pista</keresztnev>
+      <becenev>Isti</becenev>
+      <kor>23</kor>
+      <ossztondij>50000</ossztondij>
+   </studentRecord>
+   <studentRecord>
+      <id>3</id>
+      <vezeteknev>Fekete</vezeteknev>
+      <keresztnev>Béla</keresztnev>
+      <becenev>Béci</becenev>
+      <kor>24</kor>
+      <ossztondij>50002</ossztondij>
+   </studentRecord>
+</studentsTable>
