@@ -35,8 +35,16 @@ Elem: Értékelés
 --------------------------------
 Felhasználó azonosító: 2
 Sör azonosító: 2
-Pontszám: 3
-Értékelés: Atlagos, de nem rossz.
+Pontszám: 2
+Értékelés: Nem nagyon vagyok el vele!
+--------------------------------
+
+Elem: Értékelés
+--------------------------------
+Felhasználó azonosító: 2
+Sör azonosító: 3
+Pontszám: 5
+Értékelés: Kedvenc sörcim
 --------------------------------
 
 Elem: Sör
@@ -55,6 +63,15 @@ Sör azonosító: 2
 Név: Dark Lager
 Műfaj: Lager
 Alkoholtartalom: 4.8
+--------------------------------
+
+Elem: Sör
+--------------------------------
+Forgalmazó azonosító: 2
+Sör azonosító: 3
+Név: Paulaner
+Műfaj: wheatbeer
+Alkoholtartalom: 5.5
 --------------------------------
 
 Elem: Főzés
@@ -102,7 +119,7 @@ Elem: Címke
 Címke azonosító: 1
 Kalória: 45
 Összetevők: víz, árpa, komló, édesmaláta
-Nettó Térfogat (L): 0.5
+Nettó térfogat (L): 0.5
 IBU érték: 25
 --------------------------------
 
@@ -111,7 +128,7 @@ Elem: Címke
 Címke azonosító: 2
 Kalória: 52
 Összetevők: víz, árpa, komló, citromhéj
-Nettó Térfogat (L): 0.33
+Nettó térfogat (L): 0.33
 IBU érték: 18
 --------------------------------
 

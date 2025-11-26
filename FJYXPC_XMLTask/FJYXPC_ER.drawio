@@ -88,7 +88,7 @@
         <mxCell id="_ym_SDXBif_1goZ14U6L-47" value="Alkohol" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1130" y="400" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-48" value="Fo_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-48" value="Fo_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="1270" y="400" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_ym_SDXBif_1goZ14U6L-49" value="Fo_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
@@ -175,10 +175,10 @@
             <mxPoint x="720" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-67" value="Fe_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-67" value="Fe_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="430" y="110" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-68" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-68" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="570" y="110" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_ym_SDXBif_1goZ14U6L-69" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-29" target="_ym_SDXBif_1goZ14U6L-67">
@@ -211,10 +211,10 @@
             <mxPoint x="730" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-76" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-76" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="1410" y="110" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_ym_SDXBif_1goZ14U6L-77" value="Főzde_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="_ym_SDXBif_1goZ14U6L-77" value="Főzde_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="1550" y="110" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="_ym_SDXBif_1goZ14U6L-78" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-39" target="_ym_SDXBif_1goZ14U6L-77">
@@ -376,10 +376,10 @@
             <mxPoint x="1200" y="-350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-21" value="Ü_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-21" value="Ü_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="890" y="-140" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-22" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="jVxeTB4Ofey4zo_HH_Sh-22" value="S_Id" style="ellipse;whiteSpace=wrap;html=1;fontStyle=4" vertex="1" parent="1">
           <mxGeometry x="1090" y="-140" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="jVxeTB4Ofey4zo_HH_Sh-23" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_ym_SDXBif_1goZ14U6L-38" target="jVxeTB4Ofey4zo_HH_Sh-21">
