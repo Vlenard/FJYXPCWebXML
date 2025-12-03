@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keresés</title>
+    <style>
+        #root{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .box{
+            border: 2px solid #000;
+            border-radius: 10px;
+            width: 60%;
+            min-height: auto;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .submit-btn{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+    </style>
+    <script type="module" defer>
+
+
+        const savetoLocalStorage = (key, value) => {
+            localStorage.setItem(key, JSON.stringify(value));
+        };
+
+    </script>
+</head>
+<body>
+    <div id="root">
+        <div class="box">
+            <h2>Új hallgató hozzáadása</h2>
+            <form >
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="class">Évfolyam:</label>
+                <input type="number" id="class" name="class" required><br><br>
+
+                <label for="major">Szak:</label>
+                <input type="text" id="major" name="major" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br><br>
+
+                <label for="neptun">Neptunkód:</label>
+                <input type="text" id="neptun" name="neptun" required><br><br>
+
+                <button type="submit" class="submit-btn">Hozzáadás</button>
+            </form>
+        </div>
+
+        <div class="box">
+        
+        </div>
+    </div>
+</body>
+</html>
