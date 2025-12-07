@@ -76,6 +76,7 @@
     <!-- Főzés 2 -->
     <fozes sId="2" fozdeId="2">
         <fozoMester>Ruff Bálint</fozoMester>
+        <fozoMester>Nick wild</fozoMester>
         <datum>2025-04-25</datum>
     </fozes>
 
@@ -108,7 +109,10 @@
     <!-- Címke 1 -->
     <cimke cId="1">
         <kaloria>45</kaloria>
-        <osszetevok>víz, árpa, komló, édesmaláta</osszetevok>
+        <osszetevok>víz</osszetevok>
+        <osszetevok>árpa</osszetevok>
+        <osszetevok>komló</osszetevok>
+        <osszetevok>édesmaláta</osszetevok>
         <nettoTerfogat>0.5</nettoTerfogat>
         <ibu>25</ibu>
     </cimke>
@@ -116,7 +120,10 @@
     <!-- Címke 2 -->
     <cimke cId="2">
         <kaloria>52</kaloria>
-        <osszetevok>víz, árpa, komló, citromhéj</osszetevok>
+        <osszetevok>víz</osszetevok>
+        <osszetevok>árpa</osszetevok>
+        <osszetevok>komló</osszetevok>
+        <osszetevok>citromhéj</osszetevok>
         <nettoTerfogat>0.33</nettoTerfogat>
         <ibu>18</ibu>
     </cimke>

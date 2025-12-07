@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
 
 public class FjyxpcDomModify {
 
-    // ========== Attribútumnevek magyarítása a megjelenítéshez ==========
+    // ===== Attribútumnevek magyarítása a szebb megjelenítéshez =====
     private static final Map<String, String> kulcsnevek = new HashMap<>();
     static {
         kulcsnevek.put("feId", "Felhasználó azonosító");
@@ -29,34 +29,31 @@ public class FjyxpcDomModify {
         kulcsnevek.put("cId", "Címke azonosító");
     }
 
-    // ========= Mely XML elemek jelenjenek meg a konzolon =========
+    // Ez az XML elemlista fog megjelenni a konzolon
     private static final Set<String> megjelenitendo = new HashSet<>(Arrays.asList(
             "felhasznalo",
             "vasarlas",
             "sor",
-            "fozes"
-    ));
+            "fozes"));
 
     public static void main(String[] args) {
         try {
 
-            // ======================== XML BEOLVASÁS ============================
+            // ==================== XML beolvasása ====================
             File xmlFile = new File("FJYXPC_XMLTask/FJYXPC_XML.xml");
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-
-            // ===================================================================
-            // 1) MÓDOSÍTÁS: első felhasználó első vásárlásának ára -> 999
-            // ===================================================================
+            // ============================================================
+            // 1) MÓDOSÍTÁS: első <vasarlas>, ahol uId=1 → ár = 999
+            // ============================================================
             NodeList vasarlasLista = doc.getElementsByTagName("vasarlas");
 
             for (int i = 0; i < vasarlasLista.getLength(); i++) {
                 Element vas = (Element) vasarlasLista.item(i);
 
-                // első olyan <vasarlas>, ahol uId = 1
                 if ("1".equals(vas.getAttribute("uId"))) {
                     Node ar = vas.getElementsByTagName("ar").item(0);
                     if (ar != null) {
@@ -68,11 +65,11 @@ public class FjyxpcDomModify {
                 }
             }
 
-
-            // ===================================================================
-            // 2) MÓDOSÍTÁS: Sör (sId=1) értékelése -> 1
-            // ===================================================================
+            // ============================================================
+            // 2) MÓDOSÍTÁS: Sör (sId=1) értékelésének pontszáma → 1
+            // ============================================================
             NodeList ertekelesLista = doc.getElementsByTagName("ertekeles");
+
             for (int i = 0; i < ertekelesLista.getLength(); i++) {
                 Element ert = (Element) ertekelesLista.item(i);
 
@@ -88,11 +85,11 @@ public class FjyxpcDomModify {
                 }
             }
 
-
-            // ===================================================================
-            // 3) MÓDOSÍTÁS: Sör (sId=1) műfaja -> "ale"
-            // ===================================================================
+            // ============================================================
+            // 3) MÓDOSÍTÁS: Sör (sId=1) műfaja → "ale"
+            // ============================================================
             NodeList sorLista = doc.getElementsByTagName("sor");
+
             for (int i = 0; i < sorLista.getLength(); i++) {
                 Element sor = (Element) sorLista.item(i);
 
@@ -108,11 +105,11 @@ public class FjyxpcDomModify {
                 }
             }
 
-
-            // ===================================================================
-            // 4) MÓDOSÍTÁS: főzés (sId=1) főzőmestere -> "Alaktos István"
-            // ===================================================================
+            // ============================================================
+            // 4) MÓDOSÍTÁS: főzés (sId=1) főzőmestere → "Alaktos István"
+            // ============================================================
             NodeList fozesLista = doc.getElementsByTagName("fozes");
+
             for (int i = 0; i < fozesLista.getLength(); i++) {
                 Element fo = (Element) fozesLista.item(i);
 
@@ -128,11 +125,10 @@ public class FjyxpcDomModify {
                 }
             }
 
-
-            // ===================================================================
-            // 5) KIVÁLASZTOTT ENTITÁSOK KIÍRÁSA KAPCSOLATOS MAGYAR KULCSOKKAL
-            // ===================================================================
-            System.out.println("\n====== KIVÁLASZTOTT ENTITÁSOK ======\n");
+            // ============================================================
+            // 5) KIVÁLASZTOTT XML ENTITÁSOK MAGYARÍTOTT KIÍRÁSA
+            // ============================================================
+            System.out.println("\n======= KIVÁLASZTOTT XML ADATOK =======\n");
 
             Node root = doc.getDocumentElement();
             NodeList children = root.getChildNodes();
@@ -143,14 +139,14 @@ public class FjyxpcDomModify {
                 if (n.getNodeType() == Node.ELEMENT_NODE) {
                     Element elem = (Element) n;
 
-                    // Csak a kiválasztott elemek
+                    // Csak ha a lista tartalmazza
                     if (!megjelenitendo.contains(elem.getNodeName()))
                         continue;
 
                     System.out.println("Elem: " + elem.getNodeName());
                     System.out.println("--------------------------------");
 
-                    // ===== ATTRIBÚTUMOK MAGYARÍTÁSA =====
+                    // === Attribútumok magyarítva ===
                     NamedNodeMap attrs = elem.getAttributes();
                     for (int a = 0; a < attrs.getLength(); a++) {
                         Node attr = attrs.item(a);
@@ -158,7 +154,7 @@ public class FjyxpcDomModify {
                         System.out.println(kulcs + ": " + attr.getNodeValue());
                     }
 
-                    // ===== CHILD NODES KIÍRÁSA =====
+                    // === Gyermekelemek kiírása ===
                     NodeList subs = elem.getChildNodes();
                     for (int j = 0; j < subs.getLength(); j++) {
                         Node sub = subs.item(j);
@@ -166,10 +162,10 @@ public class FjyxpcDomModify {
                         if (sub.getNodeType() == Node.ELEMENT_NODE) {
                             Element se = (Element) sub;
 
-                            // Ha az elemnek vannak további elemei (pl. cím blokk)
                             if (hasElementChild(se)) {
                                 System.out.println(se.getNodeName() + ":");
                                 NodeList deep = se.getChildNodes();
+
                                 for (int k = 0; k < deep.getLength(); k++) {
                                     Node d = deep.item(k);
                                     if (d.getNodeType() == Node.ELEMENT_NODE) {
@@ -187,18 +183,18 @@ public class FjyxpcDomModify {
             }
 
         } catch (Exception e) {
+            System.out.println("Hiba történt a módosítás során:");
             e.printStackTrace();
         }
     }
 
-    // ===============================================================
-    // Segédfüggvény: megállapítja, hogy van-e további elem gyerek
-    // ===============================================================
+    // ===== Segédfüggvény: van-e elem gyerekelem =====
     private static boolean hasElementChild(Element e) {
         NodeList list = e.getChildNodes();
         for (int i = 0; i < list.getLength(); i++) {
-            if (list.item(i).getNodeType() == Node.ELEMENT_NODE)
+            if (list.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 return true;
+            }
         }
         return false;
     }

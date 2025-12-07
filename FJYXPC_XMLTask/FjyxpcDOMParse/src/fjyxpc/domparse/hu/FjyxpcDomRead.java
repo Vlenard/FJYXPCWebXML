@@ -19,10 +19,10 @@ import org.w3c.dom.NodeList;
  * DOM alapú XML olvasó program
  * 
  * Feladata:
- *  - A teljes XML dokumentum bejárása (FJYXPC_XML.xml)
- *  - Elemenként kiírás magyar megnevezésekkel
- *  - Attribútumok és gyermekelemek megjelenítése blokkszerűen
- *  - Konzolra + TXT fájlba mentés
+ * - A teljes XML dokumentum bejárása (FJYXPC_XML.xml)
+ * - Elemenként kiírás magyar megnevezésekkel
+ * - Attribútumok és gyermekelemek megjelenítése blokkszerűen
+ * - Konzolra + TXT fájlba mentés
  * ========================================================================
  */
 public class FjyxpcDomRead {
@@ -32,7 +32,6 @@ public class FjyxpcDomRead {
 
     // ===== Attribútumnevek magyarítása (sId, feId, stb.) =====
     private static final Map<String, String> kulcsNevek = new HashMap<>();
-
 
     // =====================================================================
     // MAPPÁK feltöltése — XML tagek magyar megfelelői
@@ -93,7 +92,6 @@ public class FjyxpcDomRead {
         adatNevek.put("nyitvatartas", "Nyitvatartás");
         adatNevek.put("googleErtekeles", "Google értékelés");
 
-
         // ========= XML ATTRIBÚTUMOK MAGYARÍTÁSA =========
         kulcsNevek.put("feId", "Felhasználó azonosító");
         kulcsNevek.put("sId", "Sör azonosító");
@@ -117,12 +115,10 @@ public class FjyxpcDomRead {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-
             // =================================================================
             // 2) Kiíró TXT fájl megnyitása
             // =================================================================
             FileWriter writer = new FileWriter("FJYXPC_XMLTask/FJYXPC_XML_output.txt");
-
 
             // =================================================================
             // 3) Gyökérelem neve kiírás
@@ -130,7 +126,6 @@ public class FjyxpcDomRead {
             String rootName = doc.getDocumentElement().getNodeName();
             printLine("Gyökér elem: " + at(rootName), writer);
             printLine("--------------------------------", writer);
-
 
             // =================================================================
             // 4) Gyökér gyermekelemeinek bejárása
@@ -149,7 +144,6 @@ public class FjyxpcDomRead {
                     printLine("\nElem: " + at(elem.getNodeName()), writer);
                     printLine("--------------------------------", writer);
 
-
                     // =================================================================
                     // 4/A) ATTRIBÚTUMOK (pl. sId, feId) magyar névvel
                     // =================================================================
@@ -161,51 +155,57 @@ public class FjyxpcDomRead {
                             Node attr = attributes.item(a);
 
                             // kulcsnév magyarítás
-                            String magyarKulcs =
-                                kulcsNevek.getOrDefault(attr.getNodeName(), attr.getNodeName());
+                            String magyarKulcs = kulcsNevek.getOrDefault(attr.getNodeName(), attr.getNodeName());
 
                             printLine(magyarKulcs + ": " + attr.getNodeValue(), writer);
                         }
                     }
-
 
                     // =================================================================
                     // 4/B) Gyermekelemek feldolgozása
                     // =================================================================
                     NodeList subNodes = elem.getChildNodes();
 
+                    // számláló ismétlődő tagekhez
+                    Map<String, Integer> multiCounter = new HashMap<>();
+
                     for (int j = 0; j < subNodes.getLength(); j++) {
                         Node sub = subNodes.item(j);
 
                         if (sub.getNodeType() == Node.ELEMENT_NODE) {
                             Element subElem = (Element) sub;
+                            String tagName = subElem.getNodeName();
+
+                            // Ha ismétlődik (pl. mufaj, osszetevok)
+                            multiCounter.put(tagName, multiCounter.getOrDefault(tagName, 0) + 1);
+                            int index = multiCounter.get(tagName);
 
                             // Ha van mélyebb struktúra (pl. <cim> alatt <varos>, <utca>…)
                             if (subElem.hasChildNodes() && hasElementChild(subElem)) {
 
-                                printLine(at(subElem.getNodeName()) + ":", writer);
+                                printLine(at(tagName) + ":", writer);
 
                                 NodeList deepList = subElem.getChildNodes();
-
                                 for (int k = 0; k < deepList.getLength(); k++) {
                                     Node deep = deepList.item(k);
 
                                     if (deep.getNodeType() == Node.ELEMENT_NODE) {
                                         printLine(
-                                            "    " + at(deep.getNodeName()) + ": "
-                                            + deep.getTextContent(),
-                                            writer
-                                        );
+                                                "    " + at(deep.getNodeName()) + ": " + deep.getTextContent(),
+                                                writer);
                                     }
                                 }
 
                             } else {
-                                // sima egy szintű elem: <nev>Golden Ale</nev>
-                                printLine(
-                                    at(subElem.getNodeName()) + ": "
-                                    + subElem.getTextContent(),
-                                    writer
-                                );
+
+                                // Ha ismétlődő tag (pl. Műfaj, Összetevők) → indexelt kiírás
+                                String magyarNev = at(tagName);
+
+                                if (multiCounter.get(tagName) > 1) {
+                                    printLine(magyarNev + " (" + index + "): " + subElem.getTextContent(), writer);
+                                } else {
+                                    printLine(magyarNev + ": " + subElem.getTextContent(), writer);
+                                }
                             }
                         }
                     }
@@ -221,7 +221,6 @@ public class FjyxpcDomRead {
         }
     }
 
-
     // =========================================================================
     // Segédfüggvény: megállapítja, hogy egy elemnek van-e másik elem gyermeke
     // (tehát összetett-e)
@@ -235,14 +234,12 @@ public class FjyxpcDomRead {
         return false;
     }
 
-
     // =========================================================================
     // Elemnév magyarítása (adatNevek → fallback az eredetire)
     // =========================================================================
     private static String at(String name) {
         return adatNevek.getOrDefault(name, name);
     }
-
 
     // =========================================================================
     // Kiírás konzolra + fájlba egyszerre

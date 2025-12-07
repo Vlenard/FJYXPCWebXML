@@ -71,6 +71,7 @@ Forgalmazó azonosító: 2
 Sör azonosító: 3
 Név: Paulaner
 Műfaj: wheatbeer
+Műfaj (2): Belga
 Alkoholtartalom: 5.5
 --------------------------------
 
@@ -87,6 +88,7 @@ Elem: Főzés
 Főzde azonosító: 2
 Sör azonosító: 2
 Főzőmester: Ruff Bálint
+Főzőmester (2): Nick wild
 Dátum: 2025-04-25
 --------------------------------
 
@@ -118,7 +120,10 @@ Elem: Címke
 --------------------------------
 Címke azonosító: 1
 Kalória: 45
-Összetevők: víz, árpa, komló, édesmaláta
+Összetevők: víz
+Összetevők (2): árpa
+Összetevők (3): komló
+Összetevők (4): édesmaláta
 Nettó térfogat (L): 0.5
 IBU érték: 25
 --------------------------------
@@ -127,7 +132,10 @@ Elem: Címke
 --------------------------------
 Címke azonosító: 2
 Kalória: 52
-Összetevők: víz, árpa, komló, citromhéj
+Összetevők: víz
+Összetevők (2): árpa
+Összetevők (3): komló
+Összetevők (4): citromhéj
 Nettó térfogat (L): 0.33
 IBU érték: 18
 --------------------------------

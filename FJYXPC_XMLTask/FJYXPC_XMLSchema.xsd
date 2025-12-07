@@ -122,7 +122,7 @@
     <xs:complexType name="SorTipus">
         <xs:sequence>
             <xs:element name="nev" type="xs:string"/>
-            <xs:element name="mufaj" type="xs:string"/>
+            <xs:element name="mufaj" type="xs:string" maxOccurs="unbounded"/>
             <xs:element name="alkohol" type="xs:decimal"/>
         </xs:sequence>
         <xs:attribute name="sId" type="xs:integer" use="required"/>
@@ -131,7 +131,7 @@
 
     <xs:complexType name="FozesTipus">
         <xs:sequence>
-            <xs:element name="fozoMester" type="xs:string"/>
+            <xs:element name="fozoMester" type="xs:string" maxOccurs="unbounded"/>
             <xs:element name="datum" type="xs:date"/>
         </xs:sequence>
         <xs:attribute name="sId" type="xs:integer" use="required"/>
@@ -159,7 +159,7 @@
     <xs:complexType name="CimkeTipus">
         <xs:sequence>
             <xs:element name="kaloria" type="xs:integer"/>
-            <xs:element name="osszetevok" type="xs:string"/>
+            <xs:element name="osszetevok" type="xs:string" maxOccurs="unbounded"/>
             <xs:element name="nettoTerfogat" type="xs:decimal"/>
             <xs:element name="ibu" type="xs:integer"/>
         </xs:sequence>
